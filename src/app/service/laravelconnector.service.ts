@@ -19,7 +19,7 @@ export class LaravelConnector {
 
   // ------------- SEND DATA TO LARAVEL BACKEND (FOR SIGN UP)-----------------------
   SubmitDataToBackend(signUpData: any) {
-    return this.http.post('http://127.0.0.1:8000/api/signup', signUpData).
+    return this.http.post('http://1.0.0.1:8000/api/signup', signUpData).
       subscribe((res: any) => {
         this.signUpValidationStatus = res;
       })
@@ -27,7 +27,7 @@ export class LaravelConnector {
 
   // ------------- GET ALL DATA FROM LARAVEL BACKEND (FOR SIGN IN)-----------------
   GetDataFromBackend(signInData: any) {
-    return this.http.post('http://127.0.0.1:8000/api/signin', signInData).
+    return this.http.post('http://1.0.0.1:8000/api/signin', signInData).
       subscribe((res: any) => {
         this.signInValidationStatus = res;
       })
@@ -35,7 +35,7 @@ export class LaravelConnector {
 
   // ------------- GET SPECIFIC DATA FROM LARAVEL BACKEND -------------------------
   GetIdDataBackend(id: number) {
-    return this.http.post('http://127.0.0.1:8000/api/itemID', id).
+    return this.http.post('http://1.0.0.1:8000/api/itemID', id).
       subscribe((data: any) => {
         this.users.push(data);
       })
