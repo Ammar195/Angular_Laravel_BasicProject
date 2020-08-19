@@ -1,0 +1,14 @@
+<body>
+
+  <div class="header">
+    <a href="#default" class="logo">Basic Angular Project with Laravel</a>
+    <div class="header-right">
+      <a style="cursor:pointer" routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact : true}">Home</a>
+      <a *ngIf="userSigninStatus == false" style="cursor:pointer" routerLink='/signin' routerLinkActive="active"> SignIn </a>
+      <a *ngIf="userSigninStatus == true" style="cursor:pointer" routerLink='/mydashboard' routerLinkActive="active"> Dashboard </a>
+      <a *ngIf="userSigninStatus == false" style="cursor:pointer" routerLink='/signup' routerLinkActive="active"> SignUp </a>
+      <a *ngIf="userSigninStatus == true" style="cursor:pointer" (click)="signOut()" routerLinkActive="active"> Signout </a>
+    </div>
+  </div>
+
+</body>
